@@ -39,7 +39,7 @@ RUN set -xe; \
 WORKDIR /tmp/test
 
 RUN set -xe; \
-    curl -Ls https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf --output sample.pdf
+    curl -Ls https://utfs.io/f/f1bb3ee3-45a1-414d-b96f-3b9b723b8a57-7ccfqs.pdf --output sample.pdf
 
 RUN set -xe; \
     /opt/bin/pdftoppm -png sample.pdf sample

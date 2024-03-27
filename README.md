@@ -1,5 +1,5 @@
 ## Build Poppler for Amazon Lambda as a layer
-Poppler binaries for AWS Lambda 
+Poppler binaries for AWS Lambda
 
 ![Release](https://github.com/jeylabs/aws-lambda-poppler-layer/workflows/Release/badge.svg)
 

@@ -1,10 +1,10 @@
 SHELL := /bin/bash
 
 compiler: compiler.Dockerfile
-	docker build -f ${PWD}/compiler.Dockerfile -t jeylabs/poppler/compiler:latest .
+	docker build -f ${PWD}/compiler.Dockerfile -t reductoai/poppler/compiler:latest .
 
 build: compiler
-	docker build --no-cache -f ${PWD}/builder.Dockerfile -t jeylabs/poppler:latest .
+	docker build --no-cache -f ${PWD}/builder.Dockerfile -t reductoai/poppler:latest .
 
 distribution: build
 	docker run --rm \
@@ -12,5 +12,5 @@ distribution: build
 		--volume ${PWD}/export:/export \
 		--volume ${PWD}/runtime:/runtime \
 		--volume ${PWD}/export.sh:/export.sh:ro \
-		jeylabs/poppler:latest \
+		reductoai/poppler:latest \
 		/export.sh
